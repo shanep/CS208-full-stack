@@ -6,6 +6,10 @@ This is a full-stack application for CS208, built with Node.js, Express, and Mar
 
 To set up the database, you need to run the `install_db.sh` script. This script will install MariaDB and start the server running. You only need to run this script once per Codespace.
 
+```bash
+./install.db
+```
+
 # Node.js Setup
 
 Run the following commands to set up the project:
@@ -16,6 +20,11 @@ npm start
 ```
 
 # Troubleshooting
+
+## Database User and Password
+
+If you are having issues connecting to the database, make sure that you have set the correct user and password in the `db.js` file. The default user is `root` and the password is `12345`. Using the root user is fine for this project, if you set a different password you can change these values in the `db.js` file.
+
 
 ## Make sure the Database is installed and Running
 
@@ -62,5 +71,7 @@ Follow these steps to delete your Codespace:
 
 1. Make sure you have committed all your changes and pushed them to GitHub.
 2. Go to the [Codespaces dashboard](https://github.com/codespaces).
+![Delete Codespace](codespaces-delete.png)
 3. Find your Codespace in the list and click on the "Delete" button next to it.
 4. Confirm the deletion.
+5. Create a new Codespace from the same repository and try again!
