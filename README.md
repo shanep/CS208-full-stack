@@ -6,24 +6,22 @@ This is a full-stack application for CS208, built with Node.js, Express, and Mar
 
 To set up the database, run the `install_db.sh` script. This script will install MariaDB and start the server running. You only need to run this script once per Codespace.
 
-When the script below asks for a password, use `12345`. Use the default recommendations for all other settings.
 
 ```bash
 ./setup_scripts/install_db.sh
 ```
-NOTE: The default username and password are:
-- username: root
-- password: 12345
 
-Create the initial tables:
+Use the following for questions that the script asks:
 
-```bash
-sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
-```
+- Switch to unix_socket authentication [Y/n] n
+- Change the root password? [Y/n] Y
+  - Set the password to 12345
+- Remove anonymous users? [Y/n] Y
+- Disallow root login remotely? [Y/n] Y
+- Remove test database and access to it? [Y/n] Y
+- Reload privilege tables now? [Y/n] Y
 
-Refer to the create_demo_table.sql file for details about the table and its fields. 
-
-Test the db:
+Test to make sure the db is running:
 
 ```bash
 sudo service mariadb status
@@ -42,6 +40,34 @@ Uptime:                 10 min 23 sec
 
 Threads: 1  Questions: 90  Slow queries: 0  Opens: 33  Open tables: 26  Queries per second avg: 0.144
 ```
+
+Create the initial tables:
+
+```bash
+sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+```
+
+Refer to the create_demo_table.sql file for details about the table and its fields. 
+
+
+Check to make sure the tables were created correctly
+```bash
+mysql -u root -p -e 'show databases;'
+```
+
+```
+Enter password: 
++--------------------+
+| Database           |
++--------------------+
+| cs208demo          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+```
+
 
 # Node.js Setup
 
