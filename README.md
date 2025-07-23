@@ -6,7 +6,7 @@ This is a full-stack application for CS208, built with Node.js, Express, and Mar
 
 To set up the database, run the `install_db.sh` script. This script will install MariaDB and start the server running. You only need to run this script once per Codespace.
 
-When the script below asks for a password, use `12345`. 
+When the script below asks for a password, use `12345`. Use the default recommendations for all other settings.
 
 ```bash
 ./setup_scripts/install_db.sh
