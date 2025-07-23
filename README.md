@@ -1,16 +1,29 @@
 # CS208-full-stack
 
-This is a full-stack application for CS208, built with Node.js, Express, and MariaDB (MySQL). It serves as a template for developing web applications using modern JavaScript practices. Please read the following instructions carefully because some of the setup only needs to be done once. If you are having issues, please refer to the troubleshooting section before you ask for help or re-run the setup scripts.
+This is a full-stack application for CS208, built with Node.js, Express, and MariaDB (MySQL). It serves as a template for developing web applications using modern JavaScript practices. Please read the following instructions carefully because some of the setup only needs to be done once. If you are experiencing problems, please refer to the troubleshooting section before requesting assistance or rerunning the setup scripts.
 
 # Database Setup
 
-To set up the database, you need to run the `install_db.sh` script. This script will install MariaDB and start the server running. You only need to run this script once per Codespace.
+To set up the database, run the `install_db.sh` script. This script will install MariaDB and start the server running. You only need to run this script once per Codespace.
 
 ```bash
-./install.db
+./setup_scripts/install_db.sh
+```
+NOTE: The default username and password are:
+- username: root
+- password: 12345
+
+Create the initial tables:
+
+```bash
+sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
 ```
 
+Refer to the create_demo_table.sql file for details about the table and its fields. 
+
 # Node.js Setup
+
+To get debugging, run the command below in a [debug terminal](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_javascript-debug-terminal) instead of a regular terminal.
 
 Run the following commands to set up the project:
 
@@ -23,7 +36,7 @@ npm start
 
 ## Database User and Password
 
-If you are having issues connecting to the database, make sure that you have set the correct user and password in the `db.js` file. The default user is `root` and the password is `12345`. Using the root user is fine for this project, if you set a different password you can change these values in the `db.js` file.
+If you are having issues connecting to the database, ensure that you have set the correct user and password in the `db.js` file. If you have set up a different user and password, you will need to update the' db.js' file accordingly. If you have used all the setup scripts out of the box you should not have to change anything.
 
 
 ## Make sure the Database is installed and Running
