@@ -29,6 +29,7 @@ Test the db:
 sudo service mariadb status
 ```
 
+You should see something similar to what is shown below.
 ```
 * /usr/bin/mariadb-admin  Ver 10.0 Distrib 10.11.13-MariaDB, for debian-linux-gnu on x86_64
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
