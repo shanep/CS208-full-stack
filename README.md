@@ -23,6 +23,25 @@ sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
 
 Refer to the create_demo_table.sql file for details about the table and its fields. 
 
+Test the db:
+
+```bash
+sudo service mariadb status
+```
+
+```
+* /usr/bin/mariadb-admin  Ver 10.0 Distrib 10.11.13-MariaDB, for debian-linux-gnu on x86_64
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Server version          10.11.13-MariaDB-0ubuntu0.24.04.1
+Protocol version        10
+Connection              Localhost via UNIX socket
+UNIX socket             /run/mysqld/mysqld.sock
+Uptime:                 10 min 23 sec
+
+Threads: 1  Questions: 90  Slow queries: 0  Opens: 33  Open tables: 26  Queries per second avg: 0.144
+```
+
 # Node.js Setup
 
 To get debugging, run the command below in a [debug terminal](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_javascript-debug-terminal) instead of a regular terminal.
